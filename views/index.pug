@@ -1,28 +1,31 @@
 extends layout
 
 block content
-  h1 Ice Cream Form
+  h1 Shoes Form
   from(action="/results" method="post")
-    label(for="description") Description:
+    label(for="verification") Are you 12 or above?
+    input(type="checkbox" name="verification" id="verification" value="verification")
+    p Choose which shoes brand you think is the best below;
+    input(type="radio" name ="shoes" id="nike" value="nike")
+    label(for="nike") Nike
+    br
+    input(type="radio" name ="shoes" id="skechers" value="skechers" checked)
+    label(for="skechers") Skechers
+    br
+    input(type="radio" name ="shoes" id="adidas" value="adidas")
+    label(for="adidas") Adidas
+    br
+    input(type="radio" name ="shoes" id="jordan" value="jordan")
+    label(for="jordan") Jordan
+    br
+    input(type="radio" name ="shoesOther" id="other" value="noneOfThose")
+    label(for="other") Other
+    br
+    br
+    label(for="description") Explain why the shoes you've chose are the best?
     br
     textarea(id = "description" name = "description" cols=40 rows=5)
     br
-    label(for="agree") Agree?
-    input(type="checkbox" name="agree" id="agree" value="agree")
-    br
-    input(type="radio" name ="icecream" id="chocolate" value="chocolate")
-    label(for="chocolate") Chocolate
-    br
-    input(type="radio" name ="icecream" id="strawberry" value="strawberry" checked)
-    label(for="strawberry") Strawberry
-    br
-    input(type="radio" name ="icecream" id="vanilla" value="vanilla")
-    label(for="vanilla") Vanilla
-    br
-    input(type="radio" name ="icecream" id="mint" value="mint")
-    label(for="mint") Mint
-    br
-    input(type="radio" name ="iceCreamOther" id="other" value="noneOfThose")
-    label(for="other") Other
     br
     button(type="submit") Submit This
+

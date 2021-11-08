@@ -8,9 +8,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/results', function(req, res){
   console.log(req.body.description);
-  console.log(req.body.agree);
-  console.log(req.body.icecream);
-  console.log(req.body.iceCreamOther);
+  console.log(req.body.verification);
+  console.log(req.body.shoes);
+  console.log(req.body.shoesOther);
   res.render('index')
 })
 
